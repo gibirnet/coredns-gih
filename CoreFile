@@ -1,0 +1,16 @@
+.:1053 {
+    metadata
+    
+    hosts gibirgih.host {
+        ttl 600
+        reload 86400s
+        fallthrough
+    }
+
+    forward . 2a0a:4944:14:1::2 45.12.55.55 45.12.55.56 {
+        health_check 5s domain gibir.net.tr
+    }
+
+    log
+    errors
+}
