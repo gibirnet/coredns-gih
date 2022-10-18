@@ -27,10 +27,40 @@ Sha1 olarak hash haline getirilmiş domain isimlerini gibirgih.host dosyasına h
 ```
 0.0.0.0 5e1f4f7baf524cadb03dbbffde68dc8c1ef253e3
 ```
-girmeniz yeterli olacaktır.
+girmeniz yeterli olacaktır. Bunu herhangi bir şekilde kendiniz geliştirebileceğiniz gibi aşağıda ki şekilde otomotize de edebilirsiniz.
+
+
+Önce mysql client kuralım
+```
+apt install mysql-client
+
+```
+
+Ardından aşağıda ki komut ile mysql den gerekli domainler lokal dosyaya kayıt edilir.
+
+-p den hemen sonra boşluk olmadan mysql şifrenizi girin
+
+```
+mysql -h GIH-SUNUCU-IP-ADRESI -u root -p GIH_CLIENT -e "SELECT '0.0.0.0 ', hedef FROM GIH_CLIENT.SITEVEIP where kategori = 'K' group by hedef" > gibirgih.host
+
+Örnek mysql -h 127.0.0.1 -pBenimsifrem GIH_CLIENT ......
+```
+Kurduğunuz DNS sunucunun özelliklerine göre kategori = 'K' kısmını değiştirebilir veya kombine etmek için  kategori = 'K' or  kategori = 'O' yapabilirsiniz.
+K	Kara Liste
+B	Beyaz Liste
+C	Sohbet
+O	Oyun
+S	Sosyal Medya
+U	Uygun Icerikli Oyun
+W	Cocuk Haric
+
+Bu kodu cronjoba bağlayarak listeyi güncel tutabilirsiniz.
+
 
 # Daha fazla detaya ihtiyacım var ?
+
 https://coredns.io/manual/toc/
+
 Adresinden coredns hakkında daha fazla bilgiye ulaşabilirsiniz.
 
 
@@ -43,5 +73,7 @@ https://github.com/coredns/deployment/tree/master/systemd
 
 # Credits
 https://coredns.io/
+
 https://kurumsal.gibir.net.tr
+
 https://gibir.net.tr
