@@ -28,3 +28,20 @@ Sha1 olarak hash haline getirilmiş domain isimlerini gibirgih.host dosyasına h
 0.0.0.0 5e1f4f7baf524cadb03dbbffde68dc8c1ef253e3
 ```
 girmeniz yeterli olacaktır.
+
+# Daha fazla detaya ihtiyacım var ?
+https://coredns.io/manual/toc/
+Adresinden coredns hakkında daha fazla bilgiye ulaşabilirsiniz.
+
+
+# Service olarak çalıştırma
+
+İsterseniz derlenmiş coredns dosyasını işletim sisteminizde servis olarak çalıştırabilirsiniz.
+
+https://github.com/coredns/deployment/tree/master/systemd
+
+
+# Credits
+https://coredns.io/
+https://kurumsal.gibir.net.tr
+https://gibir.net.tr
