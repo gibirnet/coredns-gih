@@ -46,13 +46,14 @@ mysql -h GIH-SUNUCU-IP-ADRESI -u root -p GIH_CLIENT -e "SELECT '0.0.0.0 ', hedef
 Örnek mysql -h 127.0.0.1 -pBenimsifrem GIH_CLIENT ......
 ```
 Kurduğunuz DNS sunucunun özelliklerine göre kategori = 'K' kısmını değiştirebilir veya kombine etmek için  kategori = 'K' or  kategori = 'O' yapabilirsiniz.
-K	Kara Liste
-B	Beyaz Liste
-C	Sohbet
-O	Oyun
-S	Sosyal Medya
-U	Uygun Icerikli Oyun
-W	Cocuk Haric
+
+- K	Kara Liste
+- B	Beyaz Liste
+- C	Sohbet
+- O	Oyun
+- S	Sosyal Medya
+- U	Uygun Icerikli Oyun
+- W	Cocuk Haric
 
 Bu kodu cronjoba bağlayarak listeyi güncel tutabilirsiniz.
 
